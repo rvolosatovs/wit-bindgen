@@ -299,6 +299,8 @@ pub unsafe fn callback(ctx: *mut u8, event0: i32, event1: i32, event2: i32) -> i
     const EVENT_FUTURE_READ: i32 = 7;
     const EVENT_FUTURE_WRITE: i32 = 8;
 
+    std::eprintln!("event0: {event0}; event1: {event1}");
+
     match event0 {
         EVENT_CALL_STARTED => 0,
         EVENT_CALL_RETURNED | EVENT_CALL_DONE | EVENT_STREAM_READ | EVENT_STREAM_WRITE
